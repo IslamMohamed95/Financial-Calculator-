@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: unset;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box
+}
+
+body {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+h1 {
+    margin-bottom: 3%;
+    font-size: 50px;
+    color: darkred;
+}
+
+form {
+    width: 50%;
+    padding: 2%;
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form label {
+    margin: 2% 0;
+    font-size: 30px;
+    font-weight: bolder;
+    color: black(241, 191, 99);
+}
+
+form input {
+    padding: 1% 2%;
+    font-size: 25px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgb(87, 86, 85) inset;
+    text-align: center;
+    color: rgb(111, 111, 235);
+}
+
+/* Chrome, Safari, Edge, Opera */
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*-------------------------------------*/
+
+h2 {
+    color: darkred;
+    margin-bottom: 2%;
+}
+
+#brandContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.brand {
+    font-size: 25px;
+    padding: 2% 10%;
+    border: 2px solid rgb(206, 204, 204);
+    box-shadow: 0px 0px 10px 0px gray;
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Button effect after click */
+.btnsEffect {
+    padding: 5% 10%;
+    background-color: black;
+    color: darkorange;
+}
+
+.selected_Btn {
+    font-family: BrandFont;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/*-----------------------------*/
+
+#result {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+#result div {
+    margin: 0 0.5%;
+}
+
+#progressBar div{
+    text-align: center;
+    height: 25px;
+    width: 350px;
+    margin: 5% 0;
+    background-color: rgb(151, 226, 245);
+    border-radius: 20px;
+   
+}
+
+#progressBar div:first-of-type, #calc > label:first-of-type, #labelCont > label:first-of-type{
+    visibility: hidden;
+}
+
+/* Brand Progress Bar */
+#progressBar div:first-of-type { 
+    width: 200px !important;   
+}
+
+/*Selected Brand Edit*/
+.branBar {
+    visibility: visible !important;
+}
+
+/* lifTime Bar */
+.lifeTimeBar {
+    background-color: rgb(23, 23, 255) !important;
+}
+
+
+#Card {
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px 0px gray;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width: 40%;
+    padding: 2%;
+    transition: all 0.5s ease-in-out;
+}
+
+/*lifTime Click Effect*/
+.cardAfterEffect{
+    transform: perspective(200px) translateZ(30px) !important;
+    z-index: 2 !important;
+}
+
+#Card div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#Card img {
+    width: 60%;
+    transform: rotate3d(1, 1.5, -0.75, 55deg);
+    margin-left: 10%;
+    z-index: 3;
+}
+
+#shadow {
+    position: absolute;
+    left: -120px;
+    bottom: -75px;
+    width: 80px;
+    height: 35px;
+    background-color: gray;
+    transform: rotate3d(0.9, 0.7, -0.65, 90deg);
+    box-shadow: 0px 0px 10px 10px gray;
+    z-index: 1
+}
+
+.shadow {
+    left: -120px !important;
+    bottom: -75px !important;
+}
+
+
+
+#Card #labelCont {
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#labelCont label {
+    margin: 4% 0;
+    font-size: 18px;
+}
+
+.main {
+    font-weight: bold;
+    font-size: 28px !important;
+}
+
+
+
+
+#calc {
+    visibility: visible; /*for Animation*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calc label {
+    font-size: 20px;
+    margin: 5% 0;
+    width: 200px;
+}
+
+
+
+/* New Font */
+@font-face {
+    font-family: BrandFont;
+    src: url('../fonts/MooLahLah-Regular.ttf');
+}
+
+
